@@ -54,6 +54,16 @@ public class MyLinkedList<E> {
 			}
 		}
 
+		// Method to Delete Last Node from Linked List
+		public void popLast() {
+			if (head != null) {
+				Node second_Last = head;
+				while (second_Last.next.next != null)
+					second_Last = second_Last.next;
+				second_Last.next = null;
+			}
+		}
+
 		// Method to print node of linked list
 		public void printNode() {
 			Node temp = head;
