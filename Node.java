@@ -1,28 +1,30 @@
 package com.bridgelabz.linkedlist;
 
 public class Node {
-	int data;
-	Node next;
-	public String key;
+	// variable declaration
+		public int key;
+		public Node next;
 
-	public Node(int data) {
-		this.data = data;
-		this.next = null;
-	}
+		// constructor
+		public Node(int key) {
+			this.key = key;
 
-	public int getData() {
-		return data;
-	}
+		}
 
-	public void setData(int data) {
-		this.data = data;
-	}
+		// getter and setter
+		public int getKey() {
+			return key;
+		}
 
-	public Node getNext() {
-		return next;
-	}
+		public void setKey(int key) {
+			this.key = key;
+		}
 
-	public void setNext(Node next) {
-		this.next = next;
+		public Node getNext() {
+			return next;
+		}
+
+		public void setNext(Node next) {
+			this.next = next;
 	}
 }
