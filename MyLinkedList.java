@@ -24,19 +24,26 @@ public class MyLinkedList<E> {
 				newNode.next = temp;
 			}
 		}
-		
+
 		// Method to append node
-			public void append(int key) {
-				Node newNode = new Node(key);
-				if (head == null) {
-					head = newNode;
-					tail = newNode;
-				} else {
-					Node temp = tail;
-					this.tail = newNode;
-					temp.next = newNode;
-				}
+		public void append(int key) {
+			Node newNode = new Node(key);
+			if (head == null) {
+				head = newNode;
+				tail = newNode;
+			} else {
+				Node temp = tail;
+				this.tail = newNode;
+				temp.next = newNode;
 			}
+		}
+
+		// Insert element
+		public void insertNode(Node prevNode, int key) {
+			Node newNode = new Node(key);
+			newNode.next = prevNode.next;
+			prevNode.next = newNode;
+		}
 
 		// Method to print node of linked list
 		public void printNode() {
