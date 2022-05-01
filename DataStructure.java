@@ -1,7 +1,8 @@
 package com.bridgelabz.linkedlist;
 /*
  * Rohit
- * Ability to insert 30 between 56 and 70
+ * Ability to delete the first element in the LinkedList of sequence 56->30->70
+ * Final Sequence: 30->70
  */
 public class DataStructure {
 	// Add element
@@ -45,6 +46,17 @@ public class DataStructure {
 			list.printNode();
 		}
 
+		// Delete first element
+		public static void popFirst() {
+			MyLinkedList list = new MyLinkedList();
+			list.add(70);
+			list.add(30);
+			list.add(56);
+			list.printNode();
+			list.pop();
+			list.printNode();
+		}
+
 		public static void main(String[] args) {
 			System.out.println("-----------Welcome to linked list program---------");
 			System.out.println();
@@ -60,6 +72,10 @@ public class DataStructure {
 			// Calling Insert Method
 			System.out.println("Insert 30 in between 56 and 70");
 			insertNode();
+
+			// Calling popFirst method to delete first node
+			System.out.println("Delete first node : ");
+			popFirst();
 	}
 
 }

@@ -45,6 +45,15 @@ public class MyLinkedList<E> {
 			prevNode.next = newNode;
 		}
 
+		// Delete first element
+		public void pop() {
+			if (head != null) {
+				Node temp = head;
+				head = head.next;
+				temp = null;
+			}
+		}
+
 		// Method to print node of linked list
 		public void printNode() {
 			Node temp = head;
